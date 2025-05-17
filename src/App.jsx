@@ -1,7 +1,4 @@
-
-import React from 'react'
-
-
+import React from "react";
 import AbiaNews from "./components/News/News";
 import ReportForm from "./components/Report/Usereport";
 import ReportsFeed from "./components/Report/ReportsFeed";
@@ -9,15 +6,13 @@ import EarlyWarnings from "./components/Report/EarlyWarnings";
 import MissingPersonForm from "./components/Report/MissingPersonForm";
 import WantedPersonForm from "./components/Report/WantedPersonForm";
 import NotificationPanel from "./components/Notification/NotificationPanel";
-import ExploreCommunity from './components/Explorecommunity/ExploreCommunity';
-import AuthForm from './pages/AuthForms';
+import ExploreCommunity from "./components/Explorecommunity/Explorecommunity";
+import AuthForm from "./pages/AuthForms";
 
 import Homepage from "./pages/Homepage";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import './App.css'
-
-
+import "./App.css";
 
 const router = createBrowserRouter([
   {
@@ -31,13 +26,11 @@ const router = createBrowserRouter([
   { path: "/missing-person", element: <MissingPersonForm /> },
   { path: "/wanted-person", element: <WantedPersonForm /> },
   { path: "/notifications", element: <NotificationPanel /> },
-  {path: "/report", element: <ReportForm />},
-  {path: "/ExploreCommunity", element: <ExploreCommunity />},
-  {path: "/auth" , element: <AuthForm/>}
+  { path: "/report", element: <ReportForm /> },
+  { path: "/ExploreCommunity", element: <ExploreCommunity /> },
+  { path: "/auth", element: <AuthForm /> },
 ]);
 
 export default function App() {
-  return (
-    <RouterProvider router={router} />
-  );
+  return <RouterProvider router={router} />;
 }
